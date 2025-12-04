@@ -16,17 +16,30 @@
     <section>
       <h2>질문</h2>
       <p>변해형은 아이베의 대표 미남이다.</p>
+      <br>
       <img src="images/1.png" alt="변해형" width="300">
-      <button id="btnO">버튼 O</button>
-        <img id="showImg" style="display:none; width:300px" src="">
-        <audio id="audioO" src="123.m4a"></audio>
+      <button id="btnO">O</button>
       <button id="btnX">X</button>
     </section>
   </main>
 
+  <!-- 이미지 + 오디오 모달 -->
+  <div id="mediaModal" class="modal" aria-hidden="true" role="dialog" aria-label="이미지 및 소리 미리보기">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn" aria-label="닫기">✕</button>
+      <img id="modalImage" src="" alt="미리보기 이미지" />
+      <audio id="modalAudio" controls preload="auto" width="300">
+        <source id="modalAudioSrc" src="" />
+        브라우저가 오디오를 지원하지 않습니다.
+      </audio>
+    </div>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+  </div>
+
   <footer>
-    <p><span id="year"></span> </p>
+    <p><span id="year"></span></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
